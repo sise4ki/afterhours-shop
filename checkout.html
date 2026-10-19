@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — AFTERHOURS®</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="checkout-page">
+
+    <header class="checkout-header">
+        <a href="index.html" class="checkout-logo">AFTERHOURS<span>®</span></a>
+        <a href="cart.html" class="checkout-back">← BACK TO BAG</a>
+    </header>
+
+    <main class="checkout-main">
+        <div class="checkout-heading">
+            <p class="checkout-eyebrow">AFTERHOURS® / SECURE CHECKOUT</p>
+            <h1>YOUR ORDER<span>.</span></h1>
+            <p>Complete your details to place your order.</p>
+        </div>
+
+        <div class="checkout-layout">
+            <form id="checkoutForm" class="checkout-form">
+
+                <section class="checkout-section">
+                    <p class="checkout-section-number">01 / CONTACT</p>
+                    <h2>Contact information</h2>
+
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" required>
+
+                    <div class="checkout-two-columns">
+                        <div>
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" id="firstName" name="firstName"
+                                   autocomplete="given-name" required>
+                        </div>
+                        <div>
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" id="lastName" name="lastName"
+                                   autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" id="phone" name="phone"
+                           autocomplete="tel" placeholder="+373..." required>
+                </section>
+
+                <section class="checkout-section">
+                    <p class="checkout-section-number">02 / DELIVERY</p>
+                    <h2>Shipping address</h2>
+
+                    <label for="country">COUNTRY</label>
+                    <select id="country" name="country" required>
+                        <option value="">SELECT COUNTRY</option>
+                        <option value="Moldova">Moldova</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="address">STREET ADDRESS</label>
+                    <input type="text" id="address" name="address"
+                           autocomplete="street-address"
+                           placeholder="Street and house number" required>
+
+                    <div class="checkout-two-columns">
+                        <div>
+                            <label for="city">CITY</label>
+                            <input type="text" id="city" name="city"
+                                   autocomplete="address-level2" required>
+                        </div>
+                        <div>
+                            <label for="postalCode">POSTAL CODE</label>
+                            <input type="text" id="postalCode" name="postalCode"
+                                   autocomplete="postal-code" required>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <p class="checkout-section-number">03 / SHIPPING</p>
+                    <h2>Delivery method</h2>
+
+                    <label class="shipping-option">
+                        <input type="radio" name="shipping" value="standard"
+                               checked>
+                        <span>
+                            <strong>STANDARD DELIVERY</strong>
+                            <small>Estimated delivery details to be confirmed</small>
+                        </span>
+                        <strong>€ 10.00</strong>
+                    </label>
+
+                    <label class="shipping-option">
+                        <input type="radio" name="shipping" value="express">
+                        <span>
+                            <strong>EXPRESS DELIVERY</strong>
+                            <small>Estimated delivery details to be confirmed</small>
+                        </span>
+                        <strong>€ 25.00</strong>
+                    </label>
+                </section>
+
+                <p id="checkoutError" class="checkout-error"
+                   role="alert"></p>
+
+                <button type="submit" class="checkout-place-order">
+                    PLACE ORDER ↗
+                </button>
+
+                <p class="checkout-disclaimer">
+                    DEMO CHECKOUT — NO PAYMENT WILL BE TAKEN.
+                </p>
+            </form>
+
+            <aside class="checkout-summary">
+                <p class="checkout-section-number">ORDER SUMMARY</p>
+                <h2>Your bag</h2>
+
+                <div id="checkoutItems" class="checkout-items"></div>
+
+                <div class="checkout-total-row">
+                    <span>SUBTOTAL</span>
+                    <span id="checkoutSubtotal">€ 0.00</span>
+                </div>
+
+                <div class="checkout-total-row">
+                    <span>SHIPPING</span>
+                    <span id="checkoutShipping">€ 10.00</span>
+                </div>
+
+                <div class="checkout-grand-total">
+                    <span>TOTAL</span>
+                    <strong id="checkoutTotal">€ 0.00</strong>
+                </div>
+
+                <p class="checkout-summary-note">
+                    Prices are displayed in EUR. This is a demonstration store.
+                </p>
+            </aside>
+        </div>
+
+        <section id="orderSuccess" class="order-success" hidden>
+            <p class="checkout-eyebrow">AFTERHOURS® / ORDER CONFIRMED</p>
+            <h2>THANK YOU<span>.</span></h2>
+            <p>Your demo order has been created successfully.</p>
+            <p>Order reference: <strong id="orderReference"></strong></p>
+            <p id="successTotal"></p>
+            <a href="index.html">CONTINUE SHOPPING ↗</a>
+        </section>
+    </main>
+
+    <script src="js/products-data.js"></script>
+<script src="js/checkout.js"></script>
+
+
+</body>
+</html>

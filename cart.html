@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag | AFTERHOURS®</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="cart-page">
+
+    <header class="product-header">
+        <a href="index.html" class="product-logo">AFTERHOURS<sup>®</sup></a>
+        <a href="index.html#products" class="back-link">← CONTINUE SHOPPING</a>
+    </header>
+
+    <main class="cart-main">
+        <div class="cart-heading">
+            <span class="detail-category">YOUR SELECTION</span>
+            <h1>SHOPPING BAG<span id="cartCount"> (0)</span></h1>
+        </div>
+
+        <div class="cart-layout">
+            <section id="cartItems" class="cart-items">
+                <!-- Products will be inserted by JavaScript -->
+            </section>
+
+            <aside class="cart-summary">
+                <span class="detail-category">ORDER SUMMARY</span>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">€ 0.00</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Shipping</span>
+                    <span>Calculated later</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>TOTAL</span>
+                    <span id="cartTotal">€ 0.00</span>
+                </div>
+
+                <button
+    id="checkoutButton"
+    class="checkout-button"
+    type="button"
+>
+    PROCEED TO CHECKOUT ↗
+</button>
+
+                <p id="checkoutMessage" class="cart-message"></p>
+                <p class="cart-disclaimer">DEMO STORE — NO REAL PAYMENT</p>
+            </aside>
+        </div>
+    </main>
+
+    <script src="js/products-data.js"></script>
+<script src="js/cart.js"></script> <!-- или checkout.js соответственно -->
+
+</body>
+</html>

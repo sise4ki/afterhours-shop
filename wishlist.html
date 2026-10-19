@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISHLIST — AFTERHOURS®</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="wishlist-header">
+        <a href="index.html" class="wishlist-logo">AFTERHOURS®</a>
+        <nav>
+            <a href="index.html#collection">COLLECTION</a>
+            <a href="cart.html">BAG</a>
+        </nav>
+    </header>
+
+    <main class="wishlist-page">
+        <div class="wishlist-heading">
+            <p>YOUR PERSONAL SELECTION</p>
+            <h1>WISHLIST<span>®</span></h1>
+        </div>
+
+        <div id="wishlistItems" class="wishlist-grid"></div>
+
+        <div id="wishlistEmpty" class="wishlist-empty" hidden>
+            <h2>NOTHING SAVED YET.</h2>
+            <p>Your selection is waiting to be made.</p>
+            <a href="index.html#collection">EXPLORE COLLECTION ↗</a>
+        </div>
+    </main>
+
+    <script src="js/products-data.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

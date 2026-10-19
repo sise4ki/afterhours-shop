@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AFTERHOURS® — Product</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="product-page">
+
+    <header class="product-header">
+        <a href="index.html" class="product-logo">AFTERHOURS<sup>®</sup></a>
+
+        <a href="index.html#collection" class="back-link">
+            ← BACK TO COLLECTION
+        </a>
+    </header>
+
+    <main class="product-detail">
+
+        <div class="product-detail-visual">
+            <span class="detail-number" id="detailNumber">PRODUCT / 001</span>
+
+            <img
+                src="assets/images/balenciaga-runner.png"
+                alt="Balenciaga Runner sneakers"
+                class="detail-image"
+                id="detailImage"
+            >
+
+            <span class="detail-caption">AFTERHOURS® SELECTION</span>
+        </div>
+
+        <div class="product-detail-info">
+
+            <span class="detail-category" id="detailCategory">FOOTWEAR / BALENCIAGA</span>
+
+            <h1 id="detailName">BALENCIAGA<br>RUNNER</h1>
+
+            <p class="detail-price" id="detailPrice">€ 895.00</p>
+
+            <div class="detail-divider"></div>
+
+            <p class="detail-description" id="detailDescription">
+                A statement sneaker selected for the AFTERHOURS® collection.
+                Designed for a bold silhouette and an unmistakable streetwear look.
+            </p>
+
+            <span class="size-label">SELECT SIZE (EU)</span>
+
+            <div class="size-options">
+                <button class="size-option" type="button" data-size="40">40</button>
+                <button class="size-option" type="button" data-size="41">41</button>
+                <button class="size-option" type="button" data-size="42">42</button>
+                <button class="size-option" type="button" data-size="43">43</button>
+                <button class="size-option" type="button" data-size="44">44</button>
+                <button class="size-option" type="button" data-size="45">45</button>
+            </div>
+
+            <button class="add-to-cart" id="addToCart" type="button">
+                ADD TO CART <span>↗</span>
+            </button>
+
+            <p class="cart-message" id="cartMessage" aria-live="polite"></p>
+
+            <div class="detail-meta">
+                <p><span>REFERENCE</span> <span id="detailReference">AH-001-RUN</span></p>
+                <p><span>COLLECTION</span> CAMPAIGN 001</p>
+                <p><span>AVAILABILITY</span> DEMO PRODUCT</p>
+            </div>
+
+        </div>
+
+    </main>
+<a href="cart.html" class="floating-cart" id="floatingCart">
+    <span>VIEW CART ↗</span>
+    <span class="floating-cart-count" id="floatingCartCount">0 ITEMS</span>
+</a>
+<script src="js/products-data.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/product.js"></script>
+
+</body>
+</html>
